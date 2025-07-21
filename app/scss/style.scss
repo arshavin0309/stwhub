@@ -346,7 +346,7 @@ h3,
     &__secure {
         grid-column: 5/6;
         grid-row: 1/5;
-        background: var(--grey);
+        background: var(--grey) url(../images/main-why-secure.avif) right bottom / contain no-repeat;
     }
 
     &__fast {
@@ -363,7 +363,11 @@ h3,
     &__support {
         grid-column: 1/5;
         grid-row: 4/6;
-        background: var(--light-blue);
+        background: var(--light-blue) url(../images/main-why-support.avif) right 13px bottom / auto calc(100% - 21px) no-repeat;
+
+        p {
+            max-width: 332px;
+        }
     }
 
     &__powerful {
@@ -381,12 +385,80 @@ h3,
         grid-column: 2/5;
         grid-row: 6/7;
         background: var(--grey);
+        background: url(../images/main-why-resources.avif) right bottom / cover no-repeat;
     }
 
     &__fees {
         grid-column: 5/6;
         grid-row: 5/7;
-        background: var(--light-blue);
+        background: url(../images/main-why-fees.avif) center bottom / cover no-repeat;
+    }
+}
+
+.main-start {
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+        padding: 39px 44px 52px;
+        background: var(--blue) url(../images/main-start-bg.avif) right center / auto 100% no-repeat;
+        border-radius: 20px;
+
+        h3 {
+            color: var(--white);
+        }
+
+        p {
+            color: var(--white);
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: 23px;
+
+        &:not(:last-of-type) {
+            padding-bottom: 21px;
+
+            .main-start__number {
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 1px;
+                    height: 100%;
+                    top: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: var(--white);
+                }
+            }
+        }
+    }
+
+    &__number {
+        position: relative;
+        margin-top: -11px;
+        font-family: "Darker Grotesque", sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 140%;
+        color: var(--white);
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--white);
+            border-radius: 50px;
+        }
     }
 }
 
