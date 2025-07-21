@@ -1,3 +1,14 @@
 @media (min-width: 1200px) {
-    
+    .btn {
+        &:hover {
+            background: var(--hover);
+        }
+
+        &-transparent {
+            &:hover {
+                color: var(--hover);
+                background: var(--white);
+            }
+        }
+    }
 }
