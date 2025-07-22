@@ -552,6 +552,78 @@ h3,
     }
 }
 
+.footer {
+    background: url(../images/footer.avif) center / 100% 100% no-repeat;
+    .container {
+        padding-top: 130px;
+        padding-bottom: 51px;
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 auto 50px;
+    }
+
+    &__list {
+        display: grid;
+        gap: 216px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__left {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 160px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+
+        &>.menu-item {
+            &>a {
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 140%;
+                color: var(--black);
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__docs {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+
+        a {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 140%;
+            color: var(--black);
+            text-decoration: none;
+        }
+    }
+
+    &__risk {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 140%;
+        color: var(--black);
+    }
+
+    &__copyright {
+        margin-top: 24px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 140%;
+        color: var(--black);
+        text-align: center;
+    }
+}
+
 @import '../scss/hovers';
 @import '../scss/1800';
 @import '../scss/1700';
