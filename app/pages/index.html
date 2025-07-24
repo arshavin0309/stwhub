@@ -267,6 +267,44 @@
             </div>
         </div>
     </section>
+
+    <section class="main-widgets">
+        <div class="container">
+            <div class="main-widgets__container">
+                <div class="main-widgets__content">
+                    <h2>Market Overview in real time</h2>
+                    <p class="text">Stay informed on global markets with real-time updates. Monitor the latest price changes, trends, and news across all major asset classes.</p>
+                </div>
+
+                <div class="widget-box">
+                    <script src="https://api.marketcheese.com/widgets/markets/widget.js" data-config='{"language":"en","orientation":"auto","defaultPeriod":"week","adaptive":true,"groups":[{"name":"Символы","symbols":"97,98,99,100,127,129,42,48,68,12"}]}'></script>
+                </div>
+            </div>
+
+            <div class="main-widgets__container">
+                <div class="main-widgets__content">
+                    <h2>Market forecasts</h2>
+                    <p class="text">Discover actionable trade ideas, expert forecasts, and data-driven market hypotheses from our global network of professional traders and analysts.</p>
+                </div>
+
+                <div class="widget-box">
+                    <script src="https://api.marketcheese.com/widgets/forecasts/widget.js" data-config='{"language":"en","orientation":"horizontal","maxRows":2,"segments":"14,4,16,8,5,7,15"}'></script>
+                </div>
+            </div>
+
+            <div class="main-widgets__container">
+                <div class="main-widgets__content">
+                    <h2>Market News</h2>
+                    <p class="text">Stay on top of the latest market-moving events, economic updates, and trading opportunities — updated in real time.</p>
+                </div>
+
+                <div class="widget-box">
+                    <script src="https://api.marketcheese.com/widgets/news/widget.js" data-config='{"language":"en","orientation":"horizontal","upload":"manual","categoriesEnabled":true,"descriptionEnabled":true}'></script>
+                </div>
+            </div>
+
+        </div>
+    </section>
 </main>
 
 @@include('../components/footer.html')

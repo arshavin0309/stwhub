@@ -626,6 +626,7 @@ h3,
 }
 
 .main-platform {
+    margin-bottom: 0;
     padding-top: 130px;
     padding-bottom: 130px;
     background: var(--light-blue);
@@ -705,7 +706,46 @@ h3,
                 background: var(--white);
             }
         }
+
+        &:last-of-type {
+            background: url(../images/main-platform-bg.avif) right bottom / cover no-repeat;
+        }
     }
+}
+
+.main-widgets {
+    margin: 0;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    background: #F6F8FA;
+
+    &__container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 380px 1fr;
+
+        &:nth-child(2n) {
+            grid-template-columns: 1fr 380px;
+
+            .widget-box {
+                order: -1;
+            }
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 60px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+}
+
+.widget-box {
+    padding: 20px;
+    background: var(--white);
+    border-radius: 20px;
 }
 
 @import '../scss/hovers';
