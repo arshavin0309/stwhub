@@ -13,7 +13,12 @@ let mainChooseSwiper = new Swiper(".main-choose__swiper", {
     }
 });
 
-const OFFSET = 130 + 85; // сдвиг вверх на 130 пикселей
+const offsets = {
+    'analytics': 85,
+    'start': 215,    // 130 + 85
+    'platform': 85,
+    'contacts': 215  // 130 + 85
+};
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -24,10 +29,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             e.preventDefault();
 
             const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - OFFSET;
+            const offset = offsets[targetID] || 0;
 
             window.scrollTo({
-                top: offsetPosition,
+                top: elementPosition - offset,
                 behavior: 'smooth'
             });
         }

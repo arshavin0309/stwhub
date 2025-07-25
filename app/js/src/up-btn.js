@@ -18,4 +18,8 @@ $(function () {
     $btn.on('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+    
+    $('.header__logo').on('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 });
