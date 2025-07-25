@@ -748,6 +748,189 @@ h3,
     border-radius: 20px;
 }
 
+.main-about {
+    background: var(--light-blue);
+    padding-top: 130px;
+    padding-bottom: 130px;
+    margin-top: 0;
+
+    &__container {
+        display: grid;
+        gap: 120px;
+        grid-template-columns: 580px 480px;
+    }
+
+    &__content {
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            &:not(:last-of-type) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.main-what {
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    &__container {
+        display: grid;
+        gap: 20px;
+        grid-template-rows: 44px 71px 240px 124px 188px 332px;
+        grid-template-columns: 180px 80px 180px 280px 380px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 42px 24px;
+        gap: 73px;
+        border-radius: 20px;
+    }
+
+    &__content {
+        grid-row: 1/3;
+        grid-column: 1/4;
+
+        p {
+            max-width: 390px;
+        }
+    }
+
+    &__james {
+        grid-row: 2/4;
+        grid-column: 4/5;
+        background: url(../images/james.avif) right bottom / cover no-repeat;
+    }
+
+    &__helen {
+        grid-column: 5/6;
+        grid-row: 1/5;
+        background: url(../images/helen.avif) right bottom / cover no-repeat;
+    }
+
+    &__carlos {
+        grid-column: 2/5;
+        grid-row: 4/6;
+        background: url(../images/carlos.avif) right bottom / cover no-repeat;
+
+        p {
+            max-width: 356px;
+        }
+    }
+
+    &__emilia {
+        grid-row: 6/7;
+        grid-column: 1/3;
+        background: url(../images/emilia.avif) right bottom / cover no-repeat;
+    }
+
+    &__li-wei {
+        grid-row: 6/7;
+        grid-column: 3/5;
+        background: url(../images/li-wei.avif) right bottom / cover no-repeat;
+
+        p {
+            max-width: 356px;
+        }
+    }
+
+    &__ahmed {
+        grid-column: 5/6;
+        grid-row: 5/7;
+        background: url(../images/ahmed.avif) right bottom / cover no-repeat;
+    }
+}
+
+.main-contacts {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 90px;
+        padding: 50px;
+        background: var(--blue);
+        border-radius: 20px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+        color: var(--white);
+
+        &+p {
+            max-width: 430px;
+            color: var(--white);
+        }
+    }
+
+    h3 {
+        margin-top: 24px;
+        margin-bottom: 10px;
+        color: var(--white);
+    }
+
+    a {
+        color: var(--white);
+        text-decoration: none;
+    }
+
+    address {
+        color: var(--white);
+        font-style: initial;
+    }
+
+    form {
+        .form-title {
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+
+        input {
+            &[type='text'] {
+                width: 100%;
+                height: 60px;
+                padding: 20px;
+                margin-bottom: 20px;
+                color: var(--white);
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 140%;
+                border: 1px solid #6A9AD3;
+                background: #4D7FBA;
+                border-radius: 10px;
+            }
+
+            &[type='checkbox'] {
+                width: 40px;
+                height: 40px;
+                border: 1px solid #6A9AD3;
+                border-radius: 5px;
+                background: #4D7FBA;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            height: 115px;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: var(--white);
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 140%;
+            border: 1px solid #6A9AD3;
+            background: #4D7FBA;
+            border-radius: 10px;
+            resize: none;
+        }
+    }
+}
+
 @import '../scss/hovers';
 @import '../scss/1800';
 @import '../scss/1700';
