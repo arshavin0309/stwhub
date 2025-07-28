@@ -1,4 +1,64 @@
 @media (min-width: 1200px) {
+    .header {
+        .menu {
+            &>.menu-item {
+                &>a {
+                    &:hover {
+                        color: var(--hover);
+                    }
+                }
+            }
+        }
+
+        &.scrolled {
+            .header__logo {
+                &:hover {
+                    path {
+                        fill: var(--black);
+                    }
+                }
+            }
+
+            .menu {
+                &>.menu-item {
+                    &>a {
+                        &:hover {
+                            color: var(--black);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__logo {
+            &:hover {
+                path {
+                    fill: var(--hover);
+                }
+            }
+        }
+
+        .menu {
+            &>.menu-item {
+                &>a {
+                    &:hover {
+                        color: var(--hover);
+                    }
+                }
+            }
+        }
+
+        &__docs {
+            a {
+                &:hover {
+                    color: var(--hover);
+                }
+            }
+        }
+    }
+
     .btn {
         &:hover {
             background: var(--hover);
@@ -8,6 +68,46 @@
             &:hover {
                 color: var(--hover);
                 background: var(--white);
+            }
+        }
+    }
+
+    .main-start {
+        .container {
+            position: relative;
+
+            &::before {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                top: -685px;
+                left: -572px;
+                background: url(../images/line.avif) center / contain no-repeat;
+                width: 828px;
+                height: 1166px;
+            }
+        }
+    }
+
+    .main-contacts {
+        .container {
+            position: relative;
+
+            &::before {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                top: 98px;
+                left: -600px;
+                background: url(../images/line.avif) center / contain no-repeat;
+                width: 828px;
+                height: 1166px;
+            }
+        }
+
+        a {
+            &:hover {
+                color: var(--black);
             }
         }
     }

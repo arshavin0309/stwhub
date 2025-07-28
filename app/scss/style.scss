@@ -225,6 +225,8 @@ h3,
         box-shadow: 1px 4px 8px -2px rgba(34, 60, 80, 0.2);
 
         .header__logo {
+            cursor: pointer;
+
             path {
                 fill: var(--light-blue);
             }
@@ -332,6 +334,10 @@ h3,
         grid-template-rows: 44px 217px 95px 124px 188px 332px;
     }
 
+    h2 {
+        margin-bottom: 10px;
+    }
+
     &__item {
         padding: 42px 24px;
         border-radius: 20px;
@@ -433,7 +439,7 @@ h3,
                     content: '';
                     width: 1px;
                     height: 100%;
-                    top: 20px;
+                    top: 30px;
                     left: 50%;
                     transform: translateX(-50%);
                     background: var(--white);
@@ -563,6 +569,7 @@ h3,
     &__logo {
         display: block;
         margin: 0 auto 50px;
+        cursor: pointer;
     }
 
     &__list {
@@ -671,6 +678,11 @@ h3,
     }
 
     &__white-box {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        justify-content: space-between;
+        align-items: start;
         margin-left: auto;
         max-width: 580px;
         padding: 42px 24px;
@@ -687,6 +699,11 @@ h3,
     }
 
     &__blue-box {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        justify-content: space-between;
+        align-items: start;
         padding: 42px 24px;
         background: var(--blue);
         border-radius: 20px;
@@ -709,6 +726,12 @@ h3,
 
         &:last-of-type {
             background: url(../images/main-platform-bg.avif) right bottom / cover no-repeat;
+        }
+    }
+
+    .btn {
+        &-transparent {
+            margin: 0;
         }
     }
 }
@@ -928,6 +951,99 @@ h3,
             border-radius: 10px;
             resize: none;
         }
+    }
+}
+
+.wpcf7-acceptance {
+    label {
+        position: relative;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #6A9AD3;
+            background: #4D7FBA;
+            box-sizing: border-box;
+        }
+
+        input {
+            &[type='checkbox'] {
+                position: absolute;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            &+span {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 40px;
+                    height: 40px;
+                    background: #4D7FBA url(../images/checked.svg) center / 30px no-repeat;
+                    border: 1px solid #6A9AD3;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    opacity: 0;
+                }
+            }
+
+            &:checked {
+                &+span {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        span {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 140%;
+            color: var(--white);
+        }
+    }
+}
+
+.error-hero {
+    margin: 0;
+    padding-top: 304px;
+    padding-bottom: 344px;
+    text-align: center;
+    background: url(../images/error-hero.avif) center / cover no-repeat;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 233px;
+        background: linear-gradient(180deg, #CDE6FE 0%, rgba(205, 230, 254, 0.866248) 28.99%, rgba(205, 230, 254, 0.572267) 61.49%, rgba(205, 230, 254, 0) 90.89%);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 280px;
+        background: linear-gradient(180deg, rgba(205, 230, 254, 0) 0%, rgba(205, 230, 254, 0.572267) 29.4%, rgba(205, 230, 254, 0.866248) 61.91%, #CDE6FE 90.89%);
+    }
+
+    h1 {
+        margin-bottom: 16px;
+        font-size: 100px;
     }
 }
 

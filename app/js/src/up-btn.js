@@ -22,4 +22,8 @@ $(function () {
     $('.header__logo').on('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+    
+    $('.footer__logo').on('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 });
