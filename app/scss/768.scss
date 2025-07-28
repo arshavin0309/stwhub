@@ -1,3 +1,110 @@
 @media (max-width: 768px) {
-    
+    .main-hero {
+        h1 {
+            max-width: 361px;
+            margin: 0 auto 16px;
+
+            &+p {
+                max-width: 361px;
+                margin: auto;
+            }
+        }
+
+        &__list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__container {
+            width: 100%;
+        }
+
+        &__top {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    h1,
+    .h1 {
+        font-size: 32px;
+    }
+
+    h2,
+    .h2 {
+        font-size: 24px;
+    }
+
+    h3,
+    .h3 {
+        font-size: 18px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .btn {
+        margin-top: 24px;
+    }
+
+    .main-why {
+        &__container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &__title-box {
+            text-align: center;
+        }
+
+        &__item {
+            min-height: 220px;
+            padding-top: 24px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        &__white-box {
+            grid-column: initial;
+        }
+    }
+
+    .main-start {
+        h2 {
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        &__list {
+            padding: 27px 16px;
+            background: var(--blue);
+
+            h3 {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .main-choose {
+        h2 {
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        &__item {
+            padding: 24px 16px;
+            gap: 38px;
+
+            .btn {
+                margin: 0;
+
+                &-transparent {
+                    margin: 0;
+                }
+            }
+        }
+    }
 }

@@ -4,7 +4,7 @@ $(function () {
     const menuItems = $('.header .menu > .menu-item');
     const subMenus = $('.header .menu > .menu-item > .sub-menu');
     const burger = $('.header__burger');
-    const headerMenu = $('.header__content');
+    const headerMenu = $('.header .menu');
     const headerBox = $('.header');
     const upButton = $('.upButton');
 
