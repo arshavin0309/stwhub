@@ -612,6 +612,7 @@ h3,
             line-height: 140%;
             color: var(--black);
             text-decoration: none;
+            white-space: nowrap;
         }
     }
 
@@ -772,10 +773,21 @@ h3,
 }
 
 .main-about {
-    background: var(--light-blue);
+    background: var(--light-blue) url(../images/line-2.avif) right top 140px / auto calc(100% - 140px) no-repeat;
     padding-top: 130px;
     padding-bottom: 130px;
     margin-top: 0;
+    overflow: hidden;
+
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 10px;
+    //     right: 0;
+    //     background: url(../images/line-2.avif) center / contain no-repeat;
+    //     width: 708px;
+    //     height: 850px;
+    // }
 
     &__container {
         display: grid;
@@ -926,6 +938,11 @@ h3,
                 border: 1px solid #6A9AD3;
                 background: #4D7FBA;
                 border-radius: 10px;
+
+                &:focus-visible {
+                    outline: none;
+                    border-color: var(--black);
+                }
             }
 
             &[type='checkbox'] {
@@ -950,6 +967,11 @@ h3,
             background: #4D7FBA;
             border-radius: 10px;
             resize: none;
+
+            &:focus-visible {
+                outline: none;
+                border-color: var(--black);
+            }
         }
     }
 }
