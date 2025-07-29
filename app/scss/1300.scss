@@ -1,3 +1,14 @@
 @media (max-width: 1300px) {
-    
+    .main-about {
+        background: var(--light-blue);
+
+        &__container {
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
 }

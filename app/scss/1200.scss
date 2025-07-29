@@ -36,6 +36,14 @@
                     fill: var(--white);
                 }
             }
+
+            .menu {
+                &>.menu-item {
+                    &>a {
+                        color: var(--white);
+                    }
+                }
+            }
         }
 
         &__logo {
@@ -46,9 +54,9 @@
         .menu {
             position: absolute;
             top: 52px;
-            right: -400px;
+            right: -280px;
             width: 100%;
-            max-width: 400px;
+            max-width: 280px;
             height: calc(100vh - 52px);
             background: var(--blue);
             flex-direction: column;
@@ -72,6 +80,7 @@
 
             &.active {
                 right: 0;
+                box-shadow: -8px 8px 8px 0px rgba(40, 40, 40, 0.2);
             }
         }
 
@@ -198,6 +207,155 @@
             margin-right: -16px;
             padding-left: 16px;
             padding-right: 16px;
+        }
+    }
+
+    .main-platform {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__white-box {
+            flex-direction: row;
+            max-width: 100%;
+            margin: 0;
+        }
+
+        &__blue-box {
+            flex-direction: row;
+
+            &:last-of-type {
+                background-size: auto 80%;
+                background-position: right bottom;
+            }
+        }
+    }
+
+    .main-widgets {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            &:nth-child(2n) {
+                .widget-box {
+                    order: initial;
+                }
+            }
+        }
+    }
+
+    .main-what {
+        &__container {
+            display: block;
+            margin-bottom: 32px;
+
+            .main-what__item {
+                display: none;
+            }
+        }
+
+        &__swiper {
+            display: block;
+            margin-left: -16px;
+            margin-right: -16px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        &__item {
+            width: 361px;
+            min-height: 400px;
+        }
+
+        &__content {
+            grid-row: initial;
+            grid-column: initial;
+
+            p {
+                max-width: initial;
+            }
+        }
+
+        &__james {
+            grid-row: initial;
+            grid-column: initial;
+            background: url(../images/james-mobile.avif) right bottom / cover no-repeat;
+        }
+
+        &__helen {
+            grid-row: initial;
+            grid-column: initial;
+            background: url(../images/helen-mobile.avif) right bottom / cover no-repeat;
+        }
+
+        &__carlos {
+            grid-row: initial;
+            grid-column: initial;
+            background: url(../images/carlos-mobile.avif) right bottom / cover no-repeat;
+
+            p {
+                max-width: initial;
+            }
+        }
+
+        &__emilia {
+            grid-row: initial;
+            grid-column: initial;
+            background: url(../images/emilia-mobile.avif) right bottom / cover no-repeat;
+        }
+
+        &__li-wei {
+            grid-row: initial;
+            grid-column: initial;
+            background: url(../images/li-wei-mobile.avif) right bottom / cover no-repeat;
+
+            p {
+                max-width: initial;
+            }
+        }
+
+        &__ahmed {
+            grid-row: initial;
+            grid-column: initial;
+            background: url(../images/ahmed-mobile.avif) right bottom / cover no-repeat;
+        }
+    }
+
+    .main-about {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .main-contacts {
+        &__container {
+            gap: 30px;
+        }
+    }
+
+    .footer {
+        background-position: left top;
+
+        &__list {
+            gap: 30px;
+        }
+
+        &__left {
+            gap: 30px;
+        }
+    }
+
+    main {
+        &>section {
+            margin-top: 80px;
+            margin-bottom: 80px;
         }
     }
 }

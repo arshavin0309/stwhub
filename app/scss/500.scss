@@ -16,5 +16,27 @@
 
     .btn {
         width: 100%;
+
+        &-transparent {
+            width: 100%;
+        }
+    }
+
+    .main-platform {
+        &__blue-box {
+            &:last-of-type {
+                padding-bottom: 250px;
+                background: var(--blue) url(../images/main-platform-bg-mobile.avif) center bottom / cover no-repeat;
+            }
+        }
+    }
+
+    .footer {
+        background: url(../images/footer-mobile.avif) left top / cover no-repeat;
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }

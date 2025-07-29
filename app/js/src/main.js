@@ -1,8 +1,9 @@
 let mainChooseSwiper = new Swiper(".main-choose__swiper", {
     slidesPerView: 'auto',
     spaceBetween: 20,
+
     autoplay: {
-        delay: 2500,
+        delay: 3000,
         disableOnInteraction: false,
     },
 
@@ -16,15 +17,62 @@ let mainChooseSwiper = new Swiper(".main-choose__swiper", {
         1200: {
             slidesPerView: 4,
         }
-    }
+    },
+
+    pagination: {
+        el: '.main-choose__pagination',
+    },
 });
 
-const offsets = {
-    'analytics': 85,
-    'start': 215,    // 130 + 85
-    'platform': 85,
-    'contacts': 215  // 130 + 85
-};
+let mainWhatSwiper = new Swiper(".main-what__swiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+
+    breakpoints: {
+        393: {
+            slidesPerView: 'auto',
+        },
+    },
+
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+
+    pagination: {
+        el: '.main-what__pagination',
+    },
+});
+
+let offsets = {};
+
+function updateOffsets() {
+    if (window.innerWidth > 1200) {
+        offsets = {
+            'analytics': 85,
+            'start': 215, // 130 + 85
+            'platform': 85,
+            'contacts': 215 // 130 + 85
+        };
+    } else {
+        offsets = {
+            'analytics': 52,
+            'start': 132, // 130 + 52
+            'platform': 52,
+            'contacts': 132 // 130 + 52
+        };
+    }
+}
+
+// начальное определение
+updateOffsets();
+
+// пересчитываем при изменении размера окна
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(updateOffsets, 150);
+});
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

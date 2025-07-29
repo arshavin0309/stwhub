@@ -1,3 +1,33 @@
+@media (max-width: 420px) {
+    .main-platform {
+        &__blue-box {
+            &:last-of-type {
+                padding-bottom: 200px;
+            }
+        }
+    }
+}
+
 @media (max-width: 360px) {
-    
+    .main-platform {
+        &__blue-box {
+            &:last-of-type {
+                background-size: 360px auto;
+            }
+        }
+    }
+
+    .widget-box {
+        margin-left: -16px;
+        margin-right: -16px;
+        border-radius: initial;
+    }
+
+    .footer {
+        &__logo {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
 }

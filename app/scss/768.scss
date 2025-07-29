@@ -107,4 +107,111 @@
             }
         }
     }
+
+    .main-platform {
+        &__content {
+            text-align: center;
+        }
+
+        &__white-box {
+            padding: 24px 16px;
+            flex-direction: column;
+        }
+
+        &__blue-box {
+            padding: 24px 16px;
+            flex-direction: column;
+
+            &:last-of-type {
+                padding-bottom: 200px;
+                background-size: auto 270px;
+            }
+        }
+    }
+
+    .main-widgets {
+        &__content {
+            text-align: center;
+        }
+    }
+
+    .widget-box {
+        padding: 10px;
+    }
+
+    .main-about {
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__content {
+            text-align: center;
+        }
+
+        img {
+            max-width: 480px;
+            margin: auto;
+        }
+
+        .btn {
+            margin-top: 36px;
+        }
+    }
+
+    .main-what {
+        &__content {
+            text-align: center;
+        }
+
+        &__item {
+            padding: 24px 16px;
+        }
+    }
+
+    .main-contacts {
+        &__container {
+            display: flex;
+            flex-direction: column;
+            padding: 40px 16px;
+        }
+
+        h2 {
+            text-align: center;
+
+            &+p {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .wpcf7-acceptance {
+        label {
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .footer {
+        background-size: cover;
+        background-position: left top;
+
+        .container {
+            padding-top: 80px;
+            padding-bottom: 90px;
+        }
+
+        &__logo {
+            width: 317px;
+            height: 65px;
+            margin-bottom: 30px;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
