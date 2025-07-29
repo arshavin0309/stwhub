@@ -1098,6 +1098,11 @@ h3,
         margin-bottom: 16px;
         font-size: 100px;
     }
+
+    .container {
+        z-index: 1;
+        position: relative;
+    }
 }
 
 @import '../scss/hovers';

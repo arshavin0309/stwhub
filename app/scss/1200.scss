@@ -358,4 +358,21 @@
             margin-bottom: 80px;
         }
     }
+
+    .error-hero {
+        padding-top: 136px;
+        padding-bottom: 90px;
+
+        &::before {
+            height: 100px;
+        }
+
+        &::after {
+            height: 100px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+    }
 }
