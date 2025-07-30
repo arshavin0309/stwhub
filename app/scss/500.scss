@@ -39,4 +39,15 @@
             flex-direction: column;
         }
     }
+
+    form .relative {
+        position: relative;
+    }
+
+    .wpcf7-spinner {
+        position: absolute !important;
+        top: 55px !important;
+        right: 10px !important;
+        margin: 0 !important;
+    }
 }
