@@ -121,10 +121,28 @@
         &__blue-box {
             padding: 24px 16px;
             flex-direction: column;
+        }
 
-            &:last-of-type {
-                padding-bottom: 200px;
-                background-size: auto 270px;
+        &__desktop {
+            padding-bottom: 200px;
+            background-size: auto 270px;
+        }
+
+        &__mobile {
+            padding: 24px 16px 217px;
+            gap: 24px;
+            flex-direction: column;
+
+            &::before {
+                height: 80px;
+            }
+        }
+
+        &__btns {
+            align-items: start;
+
+            .btn {
+                width: auto;
             }
         }
     }

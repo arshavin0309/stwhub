@@ -227,10 +227,42 @@
 
         &__blue-box {
             flex-direction: row;
+        }
 
-            &:last-of-type {
-                background-size: auto 80%;
-                background-position: right bottom;
+        &__desktop {
+            background-size: auto 80%;
+            background-position: right bottom;
+        }
+
+        &__mobile {
+            position: relative;
+            max-width: 100%;
+            grid-column: initial;
+            flex-direction: row;
+            padding-bottom: 200px;
+            background-size: auto calc(100% - 182px);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 182px;
+                right: 0;
+                width: 100%;
+                height: 50px;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 1) 16%, rgba(47, 47, 47, 0) 100%);
+            }
+
+            &>div {
+                position: relative;
+            }
+        }
+
+        &__btns {
+            flex-direction: column;
+            gap: 10px;
+
+            .btn {
+                width: 100%;
             }
         }
     }

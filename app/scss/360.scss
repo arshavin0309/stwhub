@@ -1,19 +1,15 @@
 @media (max-width: 420px) {
     .main-platform {
-        &__blue-box {
-            &:last-of-type {
-                padding-bottom: 200px;
-            }
+        &__desktop {
+            padding-bottom: 200px;
         }
     }
 }
 
 @media (max-width: 360px) {
     .main-platform {
-        &__blue-box {
-            &:last-of-type {
-                background-size: 360px auto;
-            }
+        &__desktop {
+            background-size: 360px auto;
         }
     }
 

@@ -23,10 +23,18 @@
     }
 
     .main-platform {
-        &__blue-box {
-            &:last-of-type {
-                padding-bottom: 250px;
-                background: var(--blue) url(../images/main-platform-bg-mobile.avif) center bottom / cover no-repeat;
+        &__desktop {
+            padding-bottom: 250px;
+            background: var(--blue) url(../images/main-platform-bg-mobile.avif) center bottom / cover no-repeat;
+        }
+
+        &__mobile {
+            background: var(--white) url(../images/main-platform-mobile-mobile.avif) center bottom / 100% no-repeat;
+        }
+
+        &__btns {
+            .btn {
+                width: 100%;
             }
         }
     }
