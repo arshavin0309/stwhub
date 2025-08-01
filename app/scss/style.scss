@@ -337,6 +337,12 @@ h3,
             margin-bottom: 10px;
         }
     }
+
+    &__btns {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
 }
 
 .main-why {
